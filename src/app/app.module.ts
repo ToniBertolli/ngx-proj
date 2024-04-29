@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { LibTbeModule } from 'lib-tbe';
+
 const MATERIAL_MODULES = [
   MatIconModule,
   MatToolbarModule,
@@ -18,15 +20,18 @@ const MATERIAL_MODULES = [
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LibTbeModule,
 
     MATERIAL_MODULES
   ],
   providers: [
-    MATERIAL_MODULES,
+
+
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
