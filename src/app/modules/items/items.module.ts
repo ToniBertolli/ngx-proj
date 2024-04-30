@@ -12,11 +12,7 @@ import { ItemDetailComponent } from './detail/item-detail.component';
         SharedModule,
         ItemsRoutesModule
     ],
-    exports: [
-
-    ],
-    providers: [
-
-    ]
+    exports: [],
+    providers: []
 })
 export class ItemsModule { }

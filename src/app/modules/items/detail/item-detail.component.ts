@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Item, ItemService } from '../../../shared/item.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
-
 @Component({
     templateUrl: './item-detail.component.html',
 })

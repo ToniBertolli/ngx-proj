@@ -39,7 +39,6 @@ export class FormsComponent {
             message: message ?? '',
         };
         this._dialog.open(FormResultDialogComponent, { data });
-
     }
 }
 

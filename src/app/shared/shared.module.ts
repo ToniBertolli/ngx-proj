@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule, CurrencyPipe, DatePipe, DecimalPipe, PercentPipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -70,7 +70,6 @@ const MATERIAL_MODULES = [
     MatStepperModule,
 ];
 
-
 @NgModule({
     declarations: [
         NavToolbarComponent
@@ -82,7 +81,6 @@ const MATERIAL_MODULES = [
         FormsModule,
         ReactiveFormsModule,
         RouterModule,
-
     ],
     exports: [
         MATERIAL_MODULES,
@@ -93,15 +91,9 @@ const MATERIAL_MODULES = [
         RouterModule,
 
         NavToolbarComponent,
-
     ],
     providers: [
-        CurrencyPipe,
         DatePipe,
-        DecimalPipe,
-        PercentPipe,
-
-
     ]
 })
 export class SharedModule { }
