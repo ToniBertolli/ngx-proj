@@ -8,6 +8,12 @@
 	@for (item of items; track $index) {
 		<button mat-button [routerLink]="item.link" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{ exact: true }">{{ item.label }}</button>
 	}
+	<div class="spacer"></div>
+	@if (loggedIn | async) {
+		<button mat-button (click)="handleLogout()">Logout</button>
+	} @else {
+		<button mat-button (click)="handleLogin()">Login</button>
+	}
 </mat-toolbar>
 
 <mat-menu #menu="matMenu">
