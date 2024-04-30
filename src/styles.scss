@@ -12,11 +12,146 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$ngx-proj-primary: mat.define-palette(mat.$indigo-palette);
-$ngx-proj-accent: mat.define-palette(mat.$blue-grey-palette, A200, A100, A400);
+// Define your own custom colors
+
+$custom-primary-color: (
+  50: #e0e2e7,
+  100: #b3b6c2,
+  200: #80849a,
+  300: #4d5272,
+  400: #34374C,
+  500: #1a1c2e,
+  600: #34374C,
+  700: #000011,
+  800: #000000,
+  900: #000000,
+  A100: #6b6e7d,
+  A200: #383b4a,
+  A400: #050617,
+  A700: #000000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #ffffff,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  )
+);
+
+$custom-accent-color: (
+  50: #fde0e3,
+  100: #fab1b6,
+  200: #f78187,
+  300: #f45057,
+  400: #f12c2f,
+  500: #ee2b48,
+  600: #ee2b48,
+  700: #ed2a41,
+  800: #ec293a,
+  900: #ea2630,
+  A100: #ffffff,
+  A200: #ffd6d7,
+  A400: #ffb1b2,
+  A700: #ff9899,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+$custom-accent-color2: (
+  50: #e0f9f8,
+  100: #b3f1ed,
+  200: #2beed1,
+  300: #00e3c4,
+  400: #00dcb7,
+  500: #00d5aa,
+  600: #00ce9d,
+  700: #00c790,
+  800: #00c083,
+  900: #00b976,
+  A100: #00b269,
+  A200: #00ab5c,
+  A400: #00a44f,
+  A700: #009d42,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+$custom-warn-color: (
+  50: #fdebe7,
+  100: #fac8bf,
+  200: #f7a495,
+  300: #f4806b,
+  400: #f15c41,
+  500: #ee3817,
+  600: #ed3210,
+  700: #ec2c09,
+  800: #ee6f2b,
+  900: #eb1f00,
+  A100: #ffffff,
+  A200: #ffd6d2,
+  A400: #ff9f9a,
+  A700: #ff6863,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+
+$ngx-proj-primary: mat.define-palette($custom-primary-color, 600);
+$ngx-proj-accent: mat.define-palette($custom-accent-color, 200, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$ngx-proj-warn: mat.define-palette(mat.$red-palette);
+$ngx-proj-warn: mat.define-palette($custom-warn-color);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -39,3 +174,10 @@ $ngx-proj-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.is-active {
+  //color: mat.get-color-from-palette($custom-accent-color, 500) !important;
+  span {
+    color: mat.get-color-from-palette($custom-accent-color, 300) !important;
+  }
+}

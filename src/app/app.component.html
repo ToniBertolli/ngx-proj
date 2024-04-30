@@ -1,7 +1,18 @@
-<lib-toolbar color="primary"></lib-toolbar>
+<app-nav-toolbar [items]="navItems" (toggleSideNav)="handleToggleSideNav()"></app-nav-toolbar>
 
-<lib-button color="primary" text="hoi"></lib-button>
+<mat-sidenav-container>
+	<mat-sidenav [opened]="sideNavOpend">
+		<mat-nav-list>
+			@for (item of navItems; track $index) {
+				<mat-list-item [routerLink]="item.link" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{ exact: true }">
+					<mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+					{{ item.label }}
+				</mat-list-item>
+			}
+		</mat-nav-list>
+	</mat-sidenav>
 
-<button mat-raised-button color="accent">text</button>
-
-<router-outlet />
+	<mat-sidenav-content class="full-height">
+		<router-outlet />
+	</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,37 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './modules/home/home.component';
 
-import { LibTbeModule } from 'lib-tbe';
-
-const MATERIAL_MODULES = [
-  MatIconModule,
-  MatToolbarModule,
-  MatButtonModule
-];
+// import { LibTbeModule } from 'lib-tbe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
 
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LibTbeModule,
-
-    MATERIAL_MODULES
+    SharedModule,
   ],
   providers: [
-
-
     provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
