@@ -15,7 +15,6 @@ export class NavToolbarComponent {
     }
 }
 
-
 export interface NavItem {
     label: string;
     link: string;

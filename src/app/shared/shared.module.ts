@@ -93,12 +93,15 @@ const MATERIAL_MODULES = [
         RouterModule,
 
         NavToolbarComponent,
+
     ],
     providers: [
         CurrencyPipe,
         DatePipe,
         DecimalPipe,
         PercentPipe,
+
+
     ]
 })
 export class SharedModule { }

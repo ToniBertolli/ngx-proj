@@ -181,3 +181,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: mat.get-color-from-palette($custom-accent-color, 300) !important;
   }
 }
+
+mat-divider.custom {
+  margin: 15px 0 20px;
+}

@@ -1,0 +1,23 @@
+<mat-card>
+	<mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
+		<mat-card-title>Items overview</mat-card-title>
+		<button mat-raised-button color="primary" (click)="addItem()">Add item</button>
+	</mat-card-header>
+	<mat-divider class="custom"></mat-divider>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let item of items$ | async">
+				<mat-icon matListItemIcon>yard</mat-icon>
+				<h3 matListItemTitle>{{ item.name }}</h3>
+				<span matListItemLine>Amount: {{ item.amount }}</span>
+				<span matListItemLine>price: {{ item.price }}</span>
+				<button mat-icon-button (click)="display(item)" matListItemMeta>
+					<mat-icon>info</mat-icon>
+				</button>
+				<button mat-icon-button (click)="deleteItem(item)" matListItemMeta>
+					<mat-icon>delete</mat-icon>
+				</button>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+</mat-card>
