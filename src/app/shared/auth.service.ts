@@ -2,6 +2,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+// AuthService is een service die de authenticatie van de gebruiker bijhoudt
+// Normaalgesproken verloopt de authenticatie via een backend, maar voor deze oefening houden we het simpel
 @Injectable({
     providedIn: 'root'
 })

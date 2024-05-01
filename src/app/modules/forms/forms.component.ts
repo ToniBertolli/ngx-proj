@@ -6,7 +6,7 @@ import { FormResultData, FormResultDialogComponent } from './components/form-res
 @Component({
     selector: 'app-forms',
     templateUrl: './forms.component.html',
-    styleUrls: ['./forms.component.scss']
+    styleUrls: ['./forms.component.scss'] // met styles url
 })
 export class FormsComponent {
 

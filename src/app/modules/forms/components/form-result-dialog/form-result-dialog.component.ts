@@ -2,6 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DropdownOption } from '../../forms.component';
 
+//* zonder template url
+//* zonder styles url
 @Component({
     template: `
         <h2 mat-dialog-title>Results</h2>

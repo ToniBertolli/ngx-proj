@@ -37,6 +37,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { NavToolbarComponent } from './components/nav-toolbar/nav-toolbar.component';
 import { RouterModule } from '@angular/router';
 
+// Material modules beschikbaar maken voor andere modules
 const MATERIAL_MODULES = [
     MatAutocompleteModule,
     MatButtonModule,

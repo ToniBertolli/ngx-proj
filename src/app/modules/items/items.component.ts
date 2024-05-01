@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class ItemsComponent {
 
-    items$ = this.itemService.items$;
+    items$ = this.itemService.items$; // dit is een observable van een array van items
 
     constructor(
         private router: Router,
@@ -15,14 +15,14 @@ export class ItemsComponent {
     ) { }
 
     display(item: Item) {
-        this.router.navigate(['/items', item.id]);
+        this.router.navigate(['/items', item.id]); // navigeer naar de detailpagina van het item
     }
 
     addItem() {
-        this.router.navigate(['/items', 0]);
+        this.router.navigate(['/items', 0]); // navigeer naar de detailpagina van een nieuw item
     }
 
     deleteItem(item: Item) {
-        this.itemService.deleteItem(item.id);
+        this.itemService.deleteItem(item.id); // verwijder het item
     }
 }

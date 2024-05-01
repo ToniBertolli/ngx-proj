@@ -8,6 +8,10 @@ export const canActivate: CanActivateFn = (route: ActivatedRouteSnapshot, state:
   return authService.isAuthenticated$;
 };
 
+// Routes voor de applicatie
+// Lazyloading van modules
+// pathMatch: 'full' zorgt ervoor dat de route alleen matcht als de volledige URL overeenkomt
+// canActivate is een guard die bepaalt of de gebruiker toegang heeft tot de route
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
