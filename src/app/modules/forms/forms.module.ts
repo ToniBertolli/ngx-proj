@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../../shared/shared.module';
 import { FormsRoutesModule } from './forms.routes';
-import { FormsComponent } from './forms.component';
+import { FormsComponent } from './overview/forms.component';
 import { FormResultDialogComponent } from './components/form-result-dialog/form-result-dialog.component';
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { FormResultData, FormResultDialogComponent } from './components/form-result-dialog/form-result-dialog.component';
+import { FormResultData, FormResultDialogComponent } from '../components/form-result-dialog/form-result-dialog.component';
 
 @Component({
     selector: 'app-forms',
@@ -24,7 +24,8 @@ export class FormsComponent {
         { id: '3', name: 'Other' },
     ];
 
-    constructor(private _dialog: MatDialog) { }
+    constructor(private _dialog: MatDialog) {
+    }
 
     onSubmit() {
         if (!this.form.valid)

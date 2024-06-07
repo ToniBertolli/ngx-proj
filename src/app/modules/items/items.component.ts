@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
     templateUrl: './items.component.html',
 })
 export class ItemsComponent {
-
+    items: Item[] = []; // array van items
     items$ = this.itemService.items$; // dit is een observable van een array van items
 
     constructor(

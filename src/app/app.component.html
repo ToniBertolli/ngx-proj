@@ -1,8 +1,10 @@
 <app-nav-toolbar [items]="navItems" (toggleSideNav)="handleToggleSideNav()"></app-nav-toolbar>
 
+<!-- <h1>content</h1> -->
+
 <mat-sidenav-container>
 	<mat-sidenav [opened]="sideNavOpend">
-		<mat-nav-list>
+		<mat-nav-list *ngIf="navItems.length > 0">
 			@for (item of navItems; track $index) {
 				<mat-list-item [routerLink]="item.link" [routerLinkActive]="['is-active']" [routerLinkActiveOptions]="{ exact: true }">
 					<mat-icon matListItemIcon>{{ item.icon }}</mat-icon>

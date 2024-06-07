@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { DropdownOption } from '../../forms.component';
+import { DropdownOption } from '../../overview/forms.component';
 
 //* zonder template url
 //* zonder styles url
